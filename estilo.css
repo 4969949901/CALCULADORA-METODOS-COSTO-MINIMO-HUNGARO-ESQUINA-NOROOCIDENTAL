@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    background: #d1e97b;  
+}
+
+.container {
+  background: #ff7e5f;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #feb47b, #ff7e5f);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #feb47b, #ff7e5f); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  margin: 0 auto;
+  width: 100%; /* Ajuste al 100% para que se expanda con las columnas */
+  max-width: 800px; /* Puedes ajustar el máximo según la cantidad de columnas */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px; /* Agregar un padding para mantener espacio interno */
+  overflow: auto; /* Permite que el contenedor crezca horizontalmente si es necesario */
+}
+
+
+h1, h3 {
+    color: #333;
+}
+
+input {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 8px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.escena {
+  position: absolute;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  pointer-events: none;
+}
+
+
+.burbuja {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .burbuja svg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  
+  #burbuja-bottom-layer {
+    will-change: transform;
+    transform: translateY(768px);
+    animation: fall 12.5s infinite linear;
+  }
+  
+  #burbuja-top-layer {
+    will-change: transform;
+    transform: translateY(768px);
+    animation: fall 18s infinite linear;
+  }
+  
+  #burbuja-bottom-layer-bottom {
+    will-change: transform;
+    transform: translate(1068px, -1368px);
+    animation: fall-bottom 12.5s infinite linear;
+  }
+  
+  #burbuja-top-layer-bottom {
+    will-change: transform;
+    transform: translate(1168px, -1268px);
+    animation: fall-bottom 18s infinite linear;
+  }
+  @keyframes fall {
+    100% {
+      transform: translateY(0);
+    }
+  }
+  @keyframes fall-bottom {
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
